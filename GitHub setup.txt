@@ -1,0 +1,13 @@
+﻿1. Go to the team GitHub account. Create a new one if you don't have it.
+2. On the top right corner, select "New Repository".
+3. Name the repository, for example "ftc2018".
+4. Download and install GIT from https://git-scm.com/downloads
+6. Download and install GitHub Desktop from https://desktop.github.com/
+7. Open GitHub Desktop, go to top left menu, File->Options.
+8. Select Git, you can use the same Name and Email for GitHub account.
+9. Select Accounts, sign into your GitHub account.
+10. Create a folder in your local computer, for example: Documents/FTC-2018
+10. Go to File->Clone Repository.
+11. Select the folder from step 3. The "Local path" is your local
+    computer folder for example in the Documents/FTC-2018 or your existing codes folder.
+    
