@@ -1,4 +1,4 @@
-﻿1. Go to the team GitHub account. Create a new one if you don't have it.
+﻿1. Go to the team GitHub account. Create a new one if you don't have one.
 2. On the top right corner, select "New Repository".
 3. Name the repository, for example "ftc2018".
 4. Download and install GIT from https://git-scm.com/downloads
