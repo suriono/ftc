@@ -9,7 +9,7 @@ import org.firstinspires.ftc.teamcode.Library.Autonomous_Codes;
 public class Autonomous_Blue extends Autonomous_Codes {
     @Override
 
-    protected void Autonomous_Codes() { // using Autonomous_Codes
+    protected void Autonomous_Mode() { // using Autonomous_Codes
 
         run_left_motor(10, 0.2); // use Autonomous_Codes here
 
