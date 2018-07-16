@@ -26,6 +26,7 @@ public abstract class Autonomous_Codes extends LinearOpMode { // sequence run by
         {
             idle();
         }
+        // You could add a line to stop the robot just in case after Op Mode is not active
     }
     protected abstract void Autonomous_Mode();  // All autonomous mode declaration
 
