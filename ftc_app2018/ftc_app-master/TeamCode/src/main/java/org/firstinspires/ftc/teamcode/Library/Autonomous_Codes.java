@@ -21,7 +21,8 @@ public abstract class Autonomous_Codes extends LinearOpMode { // sequence run by
         waitForStart();
         // ------------------------------------------------------
         
-        Autonomous_Mode();
+        Autonomous_Mode();       // where you put autonomous sequence
+        
         while (opModeIsActive()) // after autonomous is done wait for manual stop or stop after the timer
         {
             idle();
@@ -39,7 +40,7 @@ public abstract class Autonomous_Codes extends LinearOpMode { // sequence run by
         LeftMotor.move_left(motor_power);
 
         autonomous_elapsetime.reset();
-        while(autonomous_elapsetime.seconds() < timer_sec) { // until it passes 5 seconds
+        while(autonomous_elapsetime.seconds() < timer_sec && opModeIsActive()) { // until it passes 5 seconds
             sleep(1);
             idle();
         }
