@@ -40,7 +40,7 @@ public abstract class Autonomous_Codes extends LinearOpMode { // sequence run by
     
     // ========================All autonomous codes below to be edited =========================
 
-    public void run_left_motor(double timer_sec, double motor_power) {
+    private void run_left_motor(double timer_sec, double motor_power) {
 
         LeftMotor.move_left(motor_power);
 
