@@ -55,8 +55,7 @@ public class Debug_right_motor extends LinearOpMode {
         // run until the end of the match (driver presses STOP)
         while (opModeIsActive()) {
 
-            newmotor2.move_left();
-            newmotor2.
+            newmotor2.move_left(0.2);
 
             // Send telemetry message to signify robot running;
             telemetry.addData("Left Motor:",  "Offset = %.2f", gamepad1.left_stick_y);
