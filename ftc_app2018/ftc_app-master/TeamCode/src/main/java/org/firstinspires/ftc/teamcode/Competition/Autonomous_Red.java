@@ -6,13 +6,12 @@ import org.firstinspires.ftc.teamcode.Library.Autonomous_Codes;
 
 @Autonomous(name = "Blue Alliance Left Side", group = "Competition")
 
-public class Autonomous_Blue extends Autonomous_Codes {
+public class Autonomous_Red extends Autonomous_Codes {
     @Override
 
     protected void Autonomous_Mode() { // using Autonomous_Codes
+        // run to the right codes
+        // deposit glyph to right side
 
-        run_left_motor(10, 0.2); // use Autonomous_Codes here
-        // deposit glyph on the right
-        move_certain(0.5, true  );
     }
 }

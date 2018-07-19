@@ -22,6 +22,7 @@ public class Chassis_Motors {
     }
 
     private void motor_adjustment_example() {
+        move_left(20);
         // this one is not visible
     }
 }

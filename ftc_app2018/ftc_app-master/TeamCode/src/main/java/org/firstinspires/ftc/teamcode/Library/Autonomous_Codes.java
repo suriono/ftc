@@ -24,7 +24,7 @@ public abstract class Autonomous_Codes extends LinearOpMode { // sequence run by
         waitForStart();    // wait until the Start button is pressed
 
         // Add sequence common to all autonomous at the beginning here, Jewel for example
-        //
+        // doing jewel
         //
 
         Autonomous_Mode();       // where you put autonomous sequence for each scenaria
@@ -40,7 +40,7 @@ public abstract class Autonomous_Codes extends LinearOpMode { // sequence run by
     
     // ========================All autonomous codes below to be edited =========================
 
-    private void run_left_motor(double timer_sec, double motor_power) {
+    public void run_left_motor(double timer_sec, double motor_power) {
 
         LeftMotor.move_left(motor_power);
 
@@ -50,5 +50,9 @@ public abstract class Autonomous_Codes extends LinearOpMode { // sequence run by
             idle();
         }
         LeftMotor.move_left(0.0); // zero power to stop
+    }
+
+    public void move_certain(double speed, boolean colorallience) {
+
     }
 }
