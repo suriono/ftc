@@ -1,4 +1,4 @@
-﻿1. Read the FTC Android Studio Tutorial: 
+1. Read the FTC Android Studio Tutorial: 
    	https://github.com/ftctechnh/ftc_app/wiki/Android-Studio-Tutorial
 2. When you download the official FTC source code, place the extracted folder in
    folder where you created in the GitHub setup. That way your codes can be
@@ -6,4 +6,5 @@
 3. Open Android Studio. To open the FTC source code:
 	a. Go to the folder of the FTC source code you downloaded from the previous step.
 	b. Decend down and select "ftc_app-master"
-4. To check if you can build an FTC app, go to "Build->Build APK".
+4. To check if you can build an FTC app, go to "Build->Build APK"
+5. FTC API: http://ftckey.com/apis/ftc/
