@@ -42,7 +42,6 @@ public class Debug_PixyCam extends LinearOpMode {
 
     PixyCam pixyCam;
     PixyCam.Block block1;
-    PixyCam.Block block2;
     ElapsedTime elapsedTime = new ElapsedTime();
 
     @Override
@@ -61,6 +60,11 @@ public class Debug_PixyCam extends LinearOpMode {
                 elapsedTime.reset();
                 block1 = pixyCam.GetBiggestBlock(1);
                 telemetry.addData("Block 1:", block1.toString());
+                telemetry.addData("X :", block1.x);
+                telemetry.addData("Y :", block1.y);
+                telemetry.addData("Width :", block1.width);
+                telemetry.addData("Height :", block1.height);
+
                 telemetry.update(); // to actually send to the phone message for debugging purpose
             }
         }
