@@ -8,3 +8,7 @@
 	b. Decend down and select "ftc_app-master"
 4. To check if you can build an FTC app, go to "Build->Build APK"
 5. FTC API: http://ftckey.com/apis/ftc/
+
+How to upload code wirelessly: 1. Connect to USB and upload the code as usual. 2. Go to the Programming Mode to get the WiFi name, password, and IP address. 3. Connect to the phone Direct WiFi. 4. On Android Studio Terminal, type: a. adb tcpip 5555 b. adb connect :5555 5. Disconnect USB. 6. If it loses connection, type "adb connect :5555" again
+
+Set up the Android Studio proxy (if your computer uses proxy network) From the menu bar, click File > Settings (on a Mac, click Android Studio > Preferences). In the left pane, click Appearance & Behavior > System Settings > HTTP Proxy. The HTTP Proxy page appears. Select Auto-detect proxy settings to use an automatic proxy configuration URL for the proxy settings or Manual proxy configuration to enter each of the settings yourself. For a detailed explanation of these settings, see HTTP Proxy. Click Apply or OK for your changes to take effect.

@@ -1,0 +1,3 @@
+Install Git if it's not done yet
+Verify the Git path in the android studio, if you use GIT in the android studio (GitHub Desktop is recommended).
+If there is a proxy, in the Git command line type: git config --global http.proxy http://:@:<proxy port#>
