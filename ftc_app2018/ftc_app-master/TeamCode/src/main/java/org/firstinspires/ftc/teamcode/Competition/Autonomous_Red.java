@@ -4,7 +4,7 @@ import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 
 import org.firstinspires.ftc.teamcode.Library.Autonomous_Codes;
 
-@Autonomous(name = "Blue Alliance Left Side", group = "Competition")
+@Autonomous(name = "Red Alliance Left Side", group = "Competition")
 
 public class Autonomous_Red extends Autonomous_Codes {
     @Override

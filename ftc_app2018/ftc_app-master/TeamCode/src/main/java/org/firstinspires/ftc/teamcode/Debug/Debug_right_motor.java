@@ -35,7 +35,7 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import org.firstinspires.ftc.teamcode.Library.Chassis_Motors;
 
 
-@TeleOp(name="Debug: test left motor", group="Debugging")
+@TeleOp(name="Debug: test right motor", group="Debugging")
 //@Disabled
 public class Debug_right_motor extends LinearOpMode {
 
