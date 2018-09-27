@@ -6,8 +6,8 @@ import com.qualcomm.robotcore.hardware.I2cDeviceSynchDevice;
 import com.qualcomm.robotcore.hardware.configuration.I2cSensor;
 import com.qualcomm.robotcore.util.TypeConversion;
 
-@I2cSensor(name = "PixyCam", description = "PixyCam", xmlTag = "PixyCam")
-public class PixyCam extends I2cDeviceSynchDevice<I2cDeviceSynch> {
+//@I2cSensor(name = "PixyCam", description = "PixyCam", xmlTag = "PixyCam")
+public abstract class PixyCam extends I2cDeviceSynchDevice<I2cDeviceSynch> {
 
     /**
      * Block describes the signature, location, and size of a detected block.
