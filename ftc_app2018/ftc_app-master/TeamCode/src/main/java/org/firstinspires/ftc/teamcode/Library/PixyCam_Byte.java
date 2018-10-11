@@ -3,8 +3,6 @@ package org.firstinspires.ftc.teamcode.Library;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.I2cAddr;
 import com.qualcomm.robotcore.hardware.I2cDeviceSynch;
-import com.qualcomm.robotcore.hardware.I2cDeviceSynchDevice;
-import com.qualcomm.robotcore.util.TypeConversion;
 
 /**
  * Created by Michael Vierra, FTC 8461 on 9/13/2017.
@@ -56,5 +54,4 @@ public abstract class PixyCam_Byte  {
         // X pixel from 0 - 319 where 160 is about the center
         return get_X() - 160; // positive = object is to the right side of the robot
     }
-
 }
