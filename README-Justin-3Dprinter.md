@@ -1,8 +1,11 @@
 Load my version "MGM2RevE-Uz.ini" config file Slic3r and generate a gcode.
 
 Use Repetier:
+
   Run the gcode, it will bring the bed to the bottom.
+  
   Manually raise the bed until it clicks, until the USB is blinking again.
+  
   Manually set the temperature to 190C and wait until it hits 190C.
   Comment the gcode near the top : 
     ;G28
