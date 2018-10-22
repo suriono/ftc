@@ -1,5 +1,9 @@
 Load my version "MGM2RevE-Uz.ini" config file Slic3r and generate a gcode.
 
+
+Center the top nozzle.
+
+
 Use Repetier:
 
   Run the gcode, it will bring the bed to the bottom.
