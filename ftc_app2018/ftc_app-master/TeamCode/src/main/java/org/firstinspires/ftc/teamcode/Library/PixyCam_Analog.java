@@ -11,9 +11,9 @@ public class PixyCam_Analog  {
     private AnalogInput           analogIn_pixy = null;
 
     public PixyCam_Analog(HardwareMap hardwareMap) {
-        //digIn_detected_pixy = hardwareMap.get(DigitalChannel.class, "pixy_digital");     //  Use generic form of device mapping
+       
         digIn_detected_pixy = hardwareMap.digitalChannel.get("pixy_digital");  // if it doesn't work, try the above
-        //analogIn_pixy       = hardwareMap.get(AnalogInput.class, "pixy_analog");
+        
         analogIn_pixy       = hardwareMap.analogInput.get("pixy_analog");       // if it doesn't work, try the above
     }
 
@@ -22,7 +22,7 @@ public class PixyCam_Analog  {
         return digIn_detected_pixy.getState();
     }
 
-    // reading from pin 3 (Analog out) from Pixy
+    // reading from pin 8 (Analog out) from Pixy
     public double getAnalogRead() {   // from 0 to 3.3V where 1.15V=middle, higher means object is to the right
         return  analogIn_pixy.getVoltage();
     }
