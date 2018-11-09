@@ -32,6 +32,13 @@ public class Debug_TensorFlow extends LinearOpMode {
                     telemetry.addData("Location:", location_direction);
                     if (location_direction < 2) { // only -1, 0, 1 for left, middle and right
                         telemetry.addData("Estimate angle: ", tensorflow.angle_gold);
+                        if (location_direction < 0) {
+                            telemetry.addData("Gold location: ", "Left");
+                        } else if( location_direction<1) {
+                            telemetry.addData("Gold location: ", "Center");
+                        } else if( location_direction<2) {
+                            telemetry.addData("Gold location: ", "Right");
+                        }
                     }
                 }
                 telemetry.update(); // to actually send to the phone message for debugging purpose
