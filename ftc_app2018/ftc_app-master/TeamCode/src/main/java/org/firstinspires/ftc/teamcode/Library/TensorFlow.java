@@ -5,6 +5,7 @@ import com.qualcomm.robotcore.hardware.DigitalChannel;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
 import org.firstinspires.ftc.robotcore.external.ClassFactory;
+import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
 import org.firstinspires.ftc.robotcore.external.navigation.VuforiaLocalizer;
 import org.firstinspires.ftc.robotcore.external.tfod.Recognition;
 import org.firstinspires.ftc.robotcore.external.tfod.TFObjectDetector;
@@ -21,6 +22,7 @@ public class TensorFlow {
     private VuforiaLocalizer vuforia;
     private TFObjectDetector tfod;
     private boolean isCompatible;
+    public double angle_gold;
 
     public TensorFlow(HardwareMap hardwareMap) {
         isCompatible = initVuforia(hardwareMap);
@@ -44,6 +46,7 @@ public class TensorFlow {
                     for (Recognition recognition : updatedRecognitions) {
                         if (recognition.getLabel().equals(LABEL_GOLD_MINERAL)) {
                             goldMineralX = (int) recognition.getLeft();
+                            angle_gold = recognition.estimateAngleToObject(AngleUnit.DEGREES);
                         } else if (silverMineral1X == -1) {
                             silverMineral1X = (int) recognition.getLeft();
                         } else {
@@ -54,28 +57,28 @@ public class TensorFlow {
                         if (goldMineralX < silverMineral1X && goldMineralX < silverMineral2X) {
                             return -1;
                         } else if (goldMineralX > silverMineral1X && goldMineralX > silverMineral2X) {
-                            return 0;
-                        } else {
                             return 1;
+                        } else {
+                            return 0;
                         }
                     }
                 }
             }
         }
-        return 2;
+        return 2; // when failed to find gold mineral
+    }
+
+    // ============ Stop TensorFlow =====================
+    public void stopTensorFlow() {
+        if (tfod != null) tfod.shutdown();
     }
 
     // ======================== Initialize to get started ===========================
     private boolean initVuforia(HardwareMap hardwareMap) {
-        /*
-         * Configure Vuforia by creating a Parameter object, and passing it to the Vuforia engine.
-         */
         VuforiaLocalizer.Parameters parameters = new VuforiaLocalizer.Parameters();
-
         parameters.vuforiaLicenseKey = VUFORIA_KEY;
         parameters.cameraDirection = VuforiaLocalizer.CameraDirection.BACK;
 
-        //  Instantiate the Vuforia engine
         vuforia = ClassFactory.getInstance().createVuforia(parameters);
 
         if (ClassFactory.getInstance().canCreateTFObjectDetector()) {
