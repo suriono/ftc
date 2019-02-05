@@ -26,6 +26,7 @@ public class Debug_TensorFlow extends LinearOpMode {
             if (elapsedTime.milliseconds() > 100) // Update every tenth of a second.
             {
                 elapsedTime.reset();
+
                 telemetry.addData("is phone compatible?:", tensorflow.isPhoneCompatible());
                 if (tensorflow.isPhoneCompatible()) {
                     int location_direction = tensorflow.runTensorFlow();
@@ -43,7 +44,10 @@ public class Debug_TensorFlow extends LinearOpMode {
                 }
                 telemetry.update(); // to actually send to the phone message for debugging purpose
             }
+
+            idle();
         }
+
 
         tensorflow.stopTensorFlow();  // stop it at the end of autonomous
     }
